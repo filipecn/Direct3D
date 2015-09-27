@@ -13,69 +13,90 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Debug">
-      <UniqueIdentifier>{615a3a53-4bd7-4146-a52a-ab7410cd3d70}</UniqueIdentifier>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{13247e5d-6617-4a92-b827-5958bd4dd716}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Debug">
-      <UniqueIdentifier>{a375ad26-39f1-4103-8dab-01be6987d90a}</UniqueIdentifier>
+    <Filter Include="Header Files\graphics">
+      <UniqueIdentifier>{667a27af-a473-4c15-8b15-17cd7bf5a89f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\IO">
-      <UniqueIdentifier>{ed89f5ac-ac29-42c1-b4af-be300665269b}</UniqueIdentifier>
+    <Filter Include="Header Files\graphics\rendering">
+      <UniqueIdentifier>{3cf798b7-df08-41f4-acf8-efcf86bc84c9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\IO">
-      <UniqueIdentifier>{fd1c4d15-88c0-447a-a357-a4810d4c0312}</UniqueIdentifier>
+    <Filter Include="Header Files\graphics\scene">
+      <UniqueIdentifier>{60a6f53f-6cf3-4380-ace4-350a812579f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Common">
-      <UniqueIdentifier>{48c7960e-e3ec-4596-933d-a585d320c17a}</UniqueIdentifier>
+    <Filter Include="Header Files\io">
+      <UniqueIdentifier>{c60db3a4-085a-4285-9fce-722ec6972e2e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\External">
-      <UniqueIdentifier>{1c443c65-ecb2-4328-bcec-3e61ff861db3}</UniqueIdentifier>
+    <Filter Include="Source Files\graphics">
+      <UniqueIdentifier>{8195e196-de50-446f-bc40-212eefdb5ad8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\External">
-      <UniqueIdentifier>{dabf84ed-26b6-4d9a-b113-a906cf728677}</UniqueIdentifier>
+    <Filter Include="Source Files\graphics\scene">
+      <UniqueIdentifier>{0cf9997b-8c52-4097-a989-c2dc5b9b4a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics\rendering">
+      <UniqueIdentifier>{1cf565c2-2751-453f-9dae-d5a63098daaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\io">
+      <UniqueIdentifier>{d035f9ef-481a-4a5c-8968-726726c0561b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{5f640d07-5dc1-40d3-88cf-d656b5266b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{73e9783b-e0e8-4420-abec-a931c3450d8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{85885860-8fb2-4689-bd31-1914f6681c9c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="MathFuncsLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="utils\DebugMessage.hpp">
-      <Filter>Header Files\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="utils\debug\Console.h">
-      <Filter>Header Files\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="io\GraphicsDisplay.h">
-      <Filter>Header Files\IO</Filter>
-    </ClInclude>
-    <ClInclude Include="common\NumericalTypes.hpp">
-      <Filter>Header Files\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="utils\CheckDxError.hpp">
-      <Filter>Header Files\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="external\dxerr.h">
-      <Filter>Header Files\External</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="MathFuncsLib.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\graphics\scene\SceneObject.cpp">
+      <Filter>Source Files\graphics\scene</Filter>
     </ClCompile>
-    <ClCompile Include="utils\debug\Console.cpp">
-      <Filter>Source Files\Debug</Filter>
+    <ClCompile Include="src\graphics\rendering\Shader.cpp">
+      <Filter>Source Files\graphics\rendering</Filter>
     </ClCompile>
-    <ClCompile Include="utils\DebugMessage.cpp">
-      <Filter>Source Files\Debug</Filter>
+    <ClCompile Include="src\io\GraphicsDisplay.cpp">
+      <Filter>Source Files\io</Filter>
     </ClCompile>
-    <ClCompile Include="io\GraphicsDisplay.cpp">
-      <Filter>Source Files\IO</Filter>
+    <ClCompile Include="src\utils\DebugMessage.cpp">
+      <Filter>Source Files\utils</Filter>
     </ClCompile>
     <ClCompile Include="external\dxerr.cpp">
-      <Filter>Source Files\External</Filter>
+      <Filter>external</Filter>
     </ClCompile>
+    <ClCompile Include="src\utils\debug\Console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common\D3DHeaders.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\NumericalTypes.hpp">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\rendering\Shader.h">
+      <Filter>Header Files\graphics\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\scene\SceneObject.h">
+      <Filter>Header Files\graphics\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\GraphicsDisplay.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\CheckDxError.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\DebugMessage.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="external\dxerr.h">
+      <Filter>external</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\debug\Console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

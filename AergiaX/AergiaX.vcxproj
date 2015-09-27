@@ -72,10 +72,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86;</LibraryPath>
+    <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
+    <IntDir>Build\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include;</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86;</LibraryPath>
+    <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
+    <IntDir>Build\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,7 +89,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX;C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\external;C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\utils\debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\src;C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -120,7 +124,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX;C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\external;C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\utils\debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\src;C:\Users\Avell G1511\Documents\GitHub\Direct3D_Demos\AergiaX\external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,23 +156,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="common\NumericalTypes.hpp" />
-    <ClInclude Include="external\dxerr.h" />
-    <ClInclude Include="io\GraphicsDisplay.h" />
-    <ClInclude Include="MathFuncsLib.h" />
-    <ClInclude Include="utils\CheckDxError.hpp" />
-    <ClInclude Include="utils\DebugMessage.hpp" />
-    <ClInclude Include="utils\debug\Console.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="external\dxerr.cpp" />
-    <ClCompile Include="io\GraphicsDisplay.cpp" />
-    <ClCompile Include="MathFuncsLib.cpp" />
-    <ClCompile Include="utils\DebugMessage.cpp" />
-    <ClCompile Include="utils\debug\Console.cpp" />
+    <ClCompile Include="src\graphics\rendering\Shader.cpp" />
+    <ClCompile Include="src\graphics\scene\SceneObject.cpp" />
+    <ClCompile Include="src\io\GraphicsDisplay.cpp" />
+    <ClCompile Include="src\utils\DebugMessage.cpp" />
+    <ClCompile Include="src\utils\debug\Console.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="external\dxerr.h" />
+    <ClInclude Include="src\common\D3DHeaders.h" />
+    <ClInclude Include="src\common\NumericalTypes.hpp" />
+    <ClInclude Include="src\graphics\rendering\Shader.h" />
+    <ClInclude Include="src\graphics\scene\SceneObject.h" />
+    <ClInclude Include="src\io\GraphicsDisplay.h" />
+    <ClInclude Include="src\utils\CheckDxError.hpp" />
+    <ClInclude Include="src\utils\DebugMessage.hpp" />
+    <ClInclude Include="src\utils\debug\Console.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
