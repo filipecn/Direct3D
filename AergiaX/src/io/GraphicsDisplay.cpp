@@ -205,6 +205,41 @@ namespace aergiaX {
 		m_d3dContext->OMSetRenderTargets(1, m_backBufferTarget.GetAddressOf(), nullptr);
 		assert(m_backBufferTarget);
 
+		// Depth Buffer
+		D3D11_TEXTURE2D_DESC depthTexDesc;
+		ZeroMemory(&depthTexDesc, sizeof(depthTexDesc));
+		depthTexDesc.Width = width;
+		depthTexDesc.Height = height;
+		depthTexDesc.MipLevels = 1;
+		depthTexDesc.ArraySize = 1;
+		depthTexDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+		depthTexDesc.SampleDesc.Count = 1;
+		depthTexDesc.SampleDesc.Quality = 0;
+		depthTexDesc.Usage = D3D11_USAGE_DEFAULT;
+		depthTexDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+		depthTexDesc.CPUAccessFlags = 0;
+		depthTexDesc.MiscFlags = 0;
+
+		result = m_d3dDevice->CreateTexture2D(&depthTexDesc, NULL, &m_depthTexture);
+		if (FAILED(result)) {
+			DEBUG_MSG(L"Failed to create the depth texture!");
+		}
+
+		// Create the depth stencil view 
+		D3D11_DEPTH_STENCIL_VIEW_DESC descDSV;
+		ZeroMemory(&descDSV, sizeof(descDSV));
+		descDSV.Format = depthTexDesc.Format;
+		descDSV.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+		descDSV.Texture2D.MipSlice = 0;
+		result = m_d3dDevice->CreateDepthStencilView(m_depthTexture.Get(), &descDSV, &m_depthStencilView);
+		if (FAILED(result)) {
+			DEBUG_MSG(L"Failed to create the depth stencil target view!");
+		}
+
+		//m_d3dContext->OMSetRenderTargets(1, m_backBufferTarget.GetAddressOf(), m_depthStencilView.Get());
+		assert(m_backBufferTarget);
+		
+
 		// 4. Set the viewport.
 		D3D11_VIEWPORT viewport;
 		viewport.Width = static_cast<float>(width);
@@ -213,7 +248,6 @@ namespace aergiaX {
 		viewport.MaxDepth = 1.0f;
 		viewport.TopLeftX = 0.0f;
 		viewport.TopLeftY = 0.0f;
-
 
 		m_d3dContext->RSSetViewports(1, &viewport);
 	}

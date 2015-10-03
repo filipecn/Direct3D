@@ -162,6 +162,7 @@
     <ClCompile Include="src\io\GraphicsDisplay.cpp" />
     <ClCompile Include="src\utils\DebugMessage.cpp" />
     <ClCompile Include="src\utils\debug\Console.cpp" />
+    <ClCompile Include="src\utils\readers\TokenStream.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external\dxerr.h" />
@@ -170,9 +171,11 @@
     <ClInclude Include="src\graphics\rendering\Shader.h" />
     <ClInclude Include="src\graphics\scene\SceneObject.h" />
     <ClInclude Include="src\io\GraphicsDisplay.h" />
+    <ClInclude Include="src\math\Interpolations.h" />
     <ClInclude Include="src\utils\CheckDxError.hpp" />
     <ClInclude Include="src\utils\DebugMessage.hpp" />
     <ClInclude Include="src\utils\debug\Console.h" />
+    <ClInclude Include="src\utils\readers\TokenStream.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -28,6 +28,8 @@ namespace aergiaX {
 		Microsoft::WRL::ComPtr<IDXGISwapChain> m_swapChain;
 		Microsoft::WRL::ComPtr<ID3D11DeviceContext> m_d3dContext;
 		Microsoft::WRL::ComPtr<ID3D11RenderTargetView> m_backBufferTarget;
+		Microsoft::WRL::ComPtr<ID3D11Texture2D> m_depthTexture; 
+		Microsoft::WRL::ComPtr<ID3D11DepthStencilView> m_depthStencilView;
 
 		void setupDirect3D();
 		int run();

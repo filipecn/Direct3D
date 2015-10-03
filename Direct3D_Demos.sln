@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Projec
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AergiaX", "AergiaX\AergiaX.vcxproj", "{DD0A94C7-294C-41B4-8164-A1F1A03B8EC7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FLIP", "FLIP\FLIP.vcxproj", "{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{DD0A94C7-294C-41B4-8164-A1F1A03B8EC7}.Release|x64.Build.0 = Release|x64
 		{DD0A94C7-294C-41B4-8164-A1F1A03B8EC7}.Release|x86.ActiveCfg = Release|Win32
 		{DD0A94C7-294C-41B4-8164-A1F1A03B8EC7}.Release|x86.Build.0 = Release|Win32
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Debug|x64.ActiveCfg = Debug|x64
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Debug|x64.Build.0 = Debug|x64
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Debug|x86.ActiveCfg = Debug|Win32
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Debug|x86.Build.0 = Debug|Win32
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Release|x64.ActiveCfg = Release|x64
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Release|x64.Build.0 = Release|x64
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Release|x86.ActiveCfg = Release|Win32
+		{8F0D0D45-08EF-4E6D-9CC3-8142A79D8F01}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

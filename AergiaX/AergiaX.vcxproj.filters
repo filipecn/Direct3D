@@ -69,6 +69,9 @@
     <ClCompile Include="src\utils\debug\Console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\utils\readers\TokenStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common\D3DHeaders.h">
@@ -96,6 +99,12 @@
       <Filter>external</Filter>
     </ClInclude>
     <ClInclude Include="src\utils\debug\Console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\readers\TokenStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\Interpolations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

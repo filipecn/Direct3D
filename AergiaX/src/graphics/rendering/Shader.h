@@ -8,13 +8,13 @@ namespace aergiaX {
 		Shader();
 		~Shader();
 
-		Microsoft::WRL::ComPtr<ID3D11InputLayout> inputLayout;
+		// Vertex Shader
+		Microsoft::WRL::ComPtr<ID3DBlob> vsBlob;
 		Microsoft::WRL::ComPtr<ID3D11VertexShader> vertexShader;
-
+		// Pixel Shader
+		Microsoft::WRL::ComPtr<ID3DBlob> psBlob;
 		Microsoft::WRL::ComPtr<ID3D11PixelShader> pixelShader;
-	
-	//protected:
-		void createVertexShaderObject(Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice);
-		void createPixelShaderObject(Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice);
+
+		void init(Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice);
 	};
 }

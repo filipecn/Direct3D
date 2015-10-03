@@ -9,14 +9,17 @@ namespace aergiaX {
 		SceneObject();
 		~SceneObject();
 
-		int init(Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice);
+		virtual int init(Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice);
 
-		void render(Microsoft::WRL::ComPtr<ID3D11DeviceContext> d3dContext);
+		virtual void render(Microsoft::WRL::ComPtr<ID3D11DeviceContext> d3dContext);
 
 		Shader s;
 
 	protected:
+		Microsoft::WRL::ComPtr<ID3D11InputLayout> inputLayout;
 		Microsoft::WRL::ComPtr<ID3D11Buffer> indexBuffer;
 		Microsoft::WRL::ComPtr<ID3D11Buffer> vertexBuffer;
+		Microsoft::WRL::ComPtr<ID3D11Buffer> constantBuffer;
+		Microsoft::WRL::ComPtr<ID3D11Buffer> instanceBuffer;
 	};
 }
